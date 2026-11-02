@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:boxedEdges="all">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:overScrollMode="always">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="36dp">
+
+            <!-- Title Group: Settings button above title, both centered -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_settings"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:text="⚙"
+                android:minHeight="64dp"
+                android:stateListAnimator="@null"
+                android:outlineProvider="none"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="24sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_app_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_description"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="8dp"
+                android:singleLine="true" />
+
+            <!-- File Area: Remote + Local in one horizontal row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_remote"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/nav_remote"
+                    android:layout_marginEnd="4dp"
+                    android:minHeight="52dp"
+                    android:singleLine="true"
+                    android:paddingHorizontal="4dp"
+                    android:textSize="16sp"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    style="@style/Widget.Material3.Button"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_local"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/nav_local"
+                    android:layout_marginStart="4dp"
+                    android:minHeight="52dp"
+                    android:singleLine="true"
+                    android:paddingHorizontal="4dp"
+                    android:textSize="16sp"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    style="@style/Widget.Material3.Button"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp" />
+            </LinearLayout>
+
+            <!-- Transfer Description -->
+            <TextView
+                android:id="@+id/tv_transfer_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_transfer_desc"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Transfer Area: Two function buttons at the last row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_transfer"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/nav_transfer"
+                    android:layout_marginEnd="4dp"
+                    android:minHeight="52dp"
+                    android:singleLine="true"
+                    android:paddingHorizontal="4dp"
+                    android:textSize="16sp"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    style="@style/Widget.Material3.Button"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_history"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:text="@string/nav_history"
+                    android:layout_marginStart="4dp"
+                    android:minHeight="52dp"
+                    android:singleLine="true"
+                    android:paddingHorizontal="4dp"
+                    android:textSize="16sp"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    style="@style/Widget.Material3.Button"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp" />
+            </LinearLayout>
+
+            <!-- 底部信息：越靠近圆弧底部文字越少，保证圆形屏显示完整 -->
+            <LinearLayout
+                android:id="@+id/layout_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="44dp">
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_author"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_declaration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_declaration"
+                    android:textColor="?attr/colorOutline"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginTop="3dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.wear.widget.BoxInsetLayout>

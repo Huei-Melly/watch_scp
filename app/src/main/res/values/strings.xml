@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Watch SCP</string>
+    <string name="app_description">SFTP 文件管理器</string>
+
+    <!-- Navigation -->
+    <string name="nav_remote">远程文件</string>
+    <string name="nav_local">本地文件</string>
+    <string name="nav_transfer">传输任务</string>
+    <string name="nav_history">传输记录</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_disconnect">断开连接</string>
+
+    <!-- Connection -->
+    <string name="connect_title">SFTP 连接</string>
+    <string name="connect_address">服务器地址</string>
+    <string name="connect_port">端口</string>
+    <string name="connect_username">用户名</string>
+    <string name="connect_password">密码</string>
+    <string name="connect_button">连接服务器</string>
+    <string name="connect_connecting">连接中…</string>
+    <string name="connect_saved_servers">已保存的服务器</string>
+
+    <!-- File Browser -->
+    <string name="directory_empty">目录为空</string>
+    <string name="directory_empty_guide">当前目录为空\n\n点击 ⋮ 菜单 → 新建文件夹\n或返回上一级目录</string>
+    <string name="directory_empty_remote_guide">当前目录为空\n\n点击 ⋮ 菜单 → 新建文件夹\n或返回上一级目录</string>
+    <string name="directory_load_failed">加载失败: %s</string>
+    <string name="directory_load_failed_short">无法读取目录内容</string>
+    <string name="navigate_up">.. (返回上级)</string>
+    <string name="refresh">刷新</string>
+    <string name="select_all">全选</string>
+    <string name="download">下载</string>
+    <string name="upload">上传</string>
+    <string name="delete">删除</string>
+    <string name="rename">重命名</string>
+
+    <!-- Transfer -->
+    <string name="transfer_no_active">没有活跃的传输任务</string>
+    <string name="transfer_queue">传输队列</string>
+    <string name="transfer_uploading">上传中…</string>
+    <string name="transfer_downloading">下载中…</string>
+    <string name="transfer_pending">等待中</string>
+    <string name="transfer_paused">已暂停</string>
+    <string name="transfer_completed">已完成</string>
+    <string name="transfer_failed">失败</string>
+    <string name="transfer_pause">暂停</string>
+    <string name="transfer_resume">继续</string>
+    <string name="transfer_cancel">取消</string>
+
+    <!-- Transfer Menu -->
+    <string name="transfer_menu_delete_all">删除所有任务</string>
+    <string name="transfer_confirm_delete_all">确定要删除所有传输任务吗？</string>
+
+    <!-- History -->
+    <string name="history_empty">暂无传输记录</string>
+    <string name="history_clear">清空记录</string>
+    <string name="history_menu_clear_all">删除所有记录</string>
+    <string name="history_confirm_clear_all">确定要删除所有传输记录吗？</string>
+
+    <!-- Settings -->
+    <string name="settings_font_size">字体大小</string>
+    <string name="settings_dpi">DPI</string>
+    <string name="settings_theme">主题模式</string>
+    <string name="settings_theme_dark">深色</string>
+    <string name="settings_theme_light">浅色</string>
+    <string name="settings_font_color">字体颜色</string>
+    <string name="settings_background_color">背景颜色</string>
+    <string name="settings_download_path">下载路径</string>
+    <string name="settings_max_concurrent">最大并发传输</string>
+    <string name="settings_download_path_not_set">未设置</string>
+    <string name="settings_file_manager">文件管理</string>
+    <string name="settings_file_manager_desc">浏览和管理本地文件</string>
+    <string name="settings_select_path">选择下载路径</string>
+    <string name="settings_path_selected">已选择路径</string>
+    <string name="settings_reset_default">恢复默认设置</string>
+    <string name="transfer_added_to_queue">已加入到传输任务</string>
+
+    <!-- Directory Picker -->
+    <string name="dir_picker_title">选择下载目录</string>
+    <string name="dir_picker_select">选择此目录</string>
+    <!-- File Picker for upload -->
+    <string name="file_picker_title">选择上传文件</string>
+
+    <!-- File Operation Error Messages -->
+    <string name="file_op_error_empty_name">文件名不能为空</string>
+    <string name="file_op_error_invalid_chars">文件名不能包含 / 或 \\ 字符</string>
+    <string name="file_op_error_name_too_long">文件名过长（超过255字符）</string>
+    <string name="file_op_error_reserved_name">不能使用保留名称 . 或 ..</string>
+    <string name="file_op_error_already_exists">该名称已存在</string>
+
+    <!-- File Operations -->
+    <string name="file_op_copy">复制</string>
+    <string name="file_op_move">移动</string>
+    <string name="file_op_cut">剪切</string>
+    <string name="file_op_rename">重命名</string>
+    <string name="file_op_delete">删除</string>
+    <string name="file_op_upload">上传文件</string>
+    <string name="file_op_download">下载文件</string>
+    <string name="file_op_select">选择操作</string>
+    <string name="file_op_cancel">取消</string>
+    <string name="file_op_confirm_delete">确认删除</string>
+    <string name="file_op_confirm_delete_msg">确定要删除 %s 吗？</string>
+    <string name="file_op_rename_hint">输入新文件名</string>
+    <string name="file_op_copying">复制中…</string>
+    <string name="file_op_moving">移动中…</string>
+    <string name="file_op_success">操作成功</string>
+    <string name="file_op_failed">操作失败</string>
+    <string name="file_op_paste">粘贴</string>
+    <string name="file_op_copied">已复制</string>
+    <string name="file_op_cutted">已剪切</string>
+    <string name="file_op_uploading">上传中…</string>
+    <string name="file_op_upload_success">上传成功</string>
+    <string name="file_op_upload_failed">上传失败</string>
+    <string name="file_op_select_file">选择要上传的文件</string>
+    <string name="file_op_select_destination">选择目标位置</string>
+
+    <!-- File Management -->
+    <string name="file_op_new_folder">新建文件夹</string>
+    <string name="file_op_new_folder_hint">输入文件夹名称</string>
+    <string name="file_op_new_folder_created">文件夹创建成功</string>
+    <string name="file_op_batch_delete">批量删除</string>
+    <string name="file_op_batch_delete_confirm">确定要删除选中的 %d 个文件吗？</string>
+    <string name="file_op_batch_delete_title">批量删除确认</string>
+    <string name="file_op_select_none">未选择文件</string>
+    <string name="file_op_selected_count">已选择 %d 项</string>
+    <string name="file_op_select_all">全选</string>
+    <string name="file_op_deselect_all">取消全选</string>
+    <string name="file_op_menu">菜单</string>
+    <string name="file_op_refresh">刷新</string>
+    <string name="file_op_filter">筛选</string>
+    <string name="file_op_sort">排序</string>
+    <string name="file_op_multi_select">多选模式</string>
+    <string name="file_op_exit_multi_select">退出多选</string>
+    <string name="file_op_new_file">新建文件</string>
+    <string name="file_op_new_file_hint">输入文件名（含扩展名）</string>
+    <string name="file_op_new_file_created">文件创建成功</string>
+    <string name="file_op_info">文件信息</string>
+    <string name="file_op_info_title">文件信息</string>
+    <string name="file_op_info_path">路径</string>
+    <string name="file_op_info_size">大小</string>
+    <string name="file_op_info_date">修改日期</string>
+    <string name="file_op_enter_folder">进入文件夹</string>
+    <string name="file_op_select_this_folder">选择此文件夹</string>
+    <string name="file_op_select_this_file">选择此文件</string>
+    <string name="clipboard_contains">剪贴板中有 %d 项</string>
+    <string name="file_op_paste_confirm_title">粘贴确认</string>
+    <string name="file_op_paste_confirm">确定要粘贴 %d 项到当前目录吗？</string>
+    <string name="file_op_batch_copy">批量复制</string>
+    <string name="file_op_batch_cut">批量剪切</string>
+    <string name="file_op_batch_copy_confirm">确定要复制选中的 %d 项？</string>
+    <string name="file_op_batch_cut_confirm">确定要剪切选中的 %d 项？</string>
+    <string name="file_op_copy_progress">正在复制 %s…</string>
+    <string name="file_op_move_progress">正在移动 %s…</string>
+    <string name="file_op_paste_success">粘贴成功</string>
+    <string name="file_op_paste_failed">粘贴失败: %s</string>
+
+    <!-- Transfer Completion -->
+    <string name="transfer_download_complete">文件下载完成</string>
+    <string name="transfer_download_complete_with_path">文件已保存到：%s</string>
+    <string name="transfer_upload_complete">文件上传完成</string>
+    <string name="transfer_failed_with_reason">传输失败：%s</string>
+    <string name="file_op_install">安装</string>
+    <string name="file_op_download_install">下载并安装</string>
+    <string name="file_op_batch_download">批量下载</string>
+    <string name="file_op_upload_to_remote">上传到远程</string>
+
+    <!-- Home -->
+    <string name="home_transfer_desc">查看传输任务进度与管理队列</string>
+    <string name="home_author">作者：张杰 · QQ 35352826514</string>
+    <string name="home_version">版本 v%1$s</string>
+    <string name="home_declaration">仅供学习交流</string>
+
+    <!-- Storage Permission -->
+    <string name="storage_permission_title">需要文件访问权限</string>
+    <string name="storage_permission_message">Watch SCP 需要「所有文件访问权限」才能浏览、上传和下载本机全部文件。\n请点击「去授权」开启该权限。\n\n若手表设置中没有这个开关，可连接电脑执行 ADB 命令（可点「复制命令」）：\nadb shell appops set com.jay.watch_scp MANAGE_EXTERNAL_STORAGE allow</string>
+    <string name="storage_permission_grant">去授权</string>
+    <string name="storage_permission_copy_adb">复制命令</string>
+    <string name="storage_permission_adb_copied">ADB 命令已复制，请在电脑上执行后重启应用</string>
+    <string name="storage_permission_required_guide">缺少「所有文件访问权限」\n\n点击 ⋮ 菜单 → 授权所有文件访问\n授权后返回即可浏览本机全部文件\n\n若设置中没有该开关，可用电脑 ADB 授权：点击此处查看命令</string>
+    <string name="storage_permission_later">稍后</string>
+    <string name="storage_permission_menu">授权所有文件访问</string>
+    <string name="storage_permission_required">缺少存储权限，无法读取全部文件</string>
+    <string name="storage_permission_granted">已获得所有文件访问权限</string>
+    <string name="storage_permission_failed">本机系统设置没有提供「所有文件访问」开关，请用电脑 ADB 授权（下方可直接复制命令）</string>
+    <string name="theme_contrast_adjusted">已自动调整配色，保证文字清晰可见</string>
+    <string name="storage_permission_adb_title">通过电脑 ADB 授权</string>
+    <string name="storage_permission_adb_desc">手表设置中没有权限开关时，请在电脑上执行以下命令，然后重新打开 Watch SCP：</string>
+
+    <!-- Status -->
+    <string name="status_connected">已连接</string>
+    <string name="status_disconnected">未连接</string>
+    <string name="status_error">连接失败</string>
+
+</resources>

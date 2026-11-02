@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:boxedEdges="all">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="2dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="36dp">
+
+        <!-- Top bar: Back and Menu buttons gathered inward -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="0dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="←"
+                android:minHeight="48dp"
+                android:textSize="22sp"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_local"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorPrimary"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_marginHorizontal="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_menu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="⋮"
+                android:minHeight="48dp"
+                android:textSize="22sp"
+                android:layout_marginEnd="0dp"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- 文件路径：居中显示，过长时启用跑马灯滚动 -->
+        <TextView
+            android:id="@+id/tv_current_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Divider line between header and content -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_files"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="always"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="true"
+                android:paddingBottom="44dp" />
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/directory_empty"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progress_loading"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            </FrameLayout>
+
+        <!-- 多选计数：单独一行，避免覆盖文件列表导致无法继续点选 -->
+        <TextView
+            android:id="@+id/tv_selection_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceLabelMedium"
+            android:textColor="?attr/colorPrimary"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <!-- File Operation Toolbar - 按钮向中间聚拢排列 -->
+        <LinearLayout
+            android:id="@+id/layout_operations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_select_directory"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/dir_picker_select"
+                android:minHeight="44dp"
+                android:minWidth="160dp"
+                android:paddingHorizontal="12dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="14sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_copy"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_cut"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_paste"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_paste"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_delete"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rename"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_rename"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/upload"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_info"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/file_op_info"
+                android:layout_marginHorizontal="2dp"
+                android:minHeight="44dp"
+                android:minWidth="56dp"
+                android:paddingHorizontal="4dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeMaxTextSize="12sp"
+                style="@style/Widget.Material3.Button"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

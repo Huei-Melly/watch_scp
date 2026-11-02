@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Light colors -->
+    <color name="md_primary">#006495</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#C9E6FF</color>
+    <color name="md_on_primary_container">#001E31</color>
+    <color name="md_secondary">#4F5C6B</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#D3E0F1</color>
+    <color name="md_on_secondary_container">#0C1A28</color>
+    <color name="md_tertiary">#6B5778</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_tertiary_container">#F3DAFF</color>
+    <color name="md_on_tertiary_container">#251431</color>
+    <color name="md_error">#BA1A1A</color>
+    <color name="md_on_error">#FFFFFF</color>
+    <color name="md_error_container">#FFDAD6</color>
+    <color name="md_on_error_container">#410002</color>
+    <color name="md_background">#FDFCFF</color>
+    <color name="md_on_background">#1A1C1E</color>
+    <color name="md_surface">#FDFCFF</color>
+    <color name="md_on_surface">#1A1C1E</color>
+    <color name="md_surface_variant">#DEE3EB</color>
+    <color name="md_on_surface_variant">#414850</color>
+    <color name="md_outline">#71787F</color>
+    <color name="md_outline_variant">#C1C7CF</color>
+
+    <!-- Dark theme colors -->
+    <color name="md_primary_dark">#8DCBFF</color>
+    <color name="md_on_primary_dark">#003352</color>
+    <color name="md_primary_container_dark">#004B73</color>
+    <color name="md_on_primary_container_dark">#C9E6FF</color>
+    <color name="md_secondary_dark">#B8C4D5</color>
+    <color name="md_on_secondary_dark">#212E3D</color>
+    <color name="md_secondary_container_dark">#384553</color>
+    <color name="md_on_secondary_container_dark">#D3E0F1</color>
+    <color name="md_tertiary_dark">#D6BEE4</color>
+    <color name="md_on_tertiary_dark">#3B2947</color>
+    <color name="md_tertiary_container_dark">#523F5E</color>
+    <color name="md_on_tertiary_container_dark">#F3DAFF</color>
+    <color name="md_error_dark">#FFB4AB</color>
+    <color name="md_on_error_dark">#690005</color>
+    <color name="md_error_container_dark">#93000A</color>
+    <color name="md_on_error_container_dark">#FFDAD6</color>
+    <color name="md_background_dark">#1A1C1E</color>
+    <color name="md_on_background_dark">#E2E2E6</color>
+    <color name="md_surface_dark">#1A1C1E</color>
+    <color name="md_on_surface_dark">#E2E2E6</color>
+    <color name="md_surface_variant_dark">#414850</color>
+    <color name="md_on_surface_variant_dark">#C1C7CF</color>
+    <color name="md_outline_dark">#8B9199</color>
+    <color name="md_outline_variant_dark">#414850</color>
+
+    <!-- Status colors -->
+    <color name="status_success">#2E7D32</color>
+    <color name="status_error">#D32F2F</color>
+    <color name="status_warning">#F57C00</color>
+    <color name="status_info">#1976D2</color>
+
+    <!-- File type colors -->
+    <color name="file_type_text">#1976D2</color>
+    <color name="file_type_image">#E64A19</color>
+    <color name="file_type_audio">#7B1FA2</color>
+    <color name="file_type_video">#F9A825</color>
+    <color name="file_type_archive">#00796B</color>
+
+    <!-- Surface colors -->
+    <color name="surface_card">#FDFCFF</color>
+    <color name="surface_card_dark">#2C2E30</color>
+
+    <!-- Ripple color for button press feedback -->
+    <color name="md_ripple">#40FFFFFF</color>
+</resources>
